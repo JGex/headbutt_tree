@@ -1,0 +1,43 @@
+###> ide
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+###< ide
+
+###> Makefile
+local.mk
+###< Makefile
+
+###> Docker
+docker/.docker.env
+###< Docker
+
+###> node
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+*.tsbuildinfo
+###< node
+
+###> Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+###< Logs
+
+###> cypress
+/cypress/videos/
+/cypress/screenshots/
+###< cypress

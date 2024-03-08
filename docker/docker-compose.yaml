@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  headbutt-tree-node:
+    container_name: headbutt-tree-node
+    command: /bin/sh -c "npm run serv"
+    working_dir: /app
+    user: ${WEBUSER_UID}:${WEBUSER_GID}
+    build:
+      context: ./node
+    ports:
+      - ${SERVER_PORT}:8080
+    volumes:
+      - ../:/app
+    networks:
+      - headbutt-tree
+
+networks:
+  headbutt-tree:
