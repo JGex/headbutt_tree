@@ -68,7 +68,7 @@ To install a new package
 make node-install PACKAGE="package name"
 ```
 
-For others commands, see the help provided by the Makefile
+For other commands, see the help provided by the Makefile
 ```bash
 Make
 ```
