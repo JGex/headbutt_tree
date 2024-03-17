@@ -1,0 +1,16 @@
+.e__content {
+  &__rate {
+    &__widget {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 5px;
+
+      &__label {
+      }
+
+      &__input {
+        margin-left: auto;
+      }
+    }
+  }
+}
