@@ -72,3 +72,8 @@ For others commands, see the help provided by the Makefile
 ```bash
 Make
 ```
+
+## Roadmap
+### v1
+- Add stars and circles on the map to know where to find Pokemons
+- add pre-commit hook with the linter
