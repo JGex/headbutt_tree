@@ -1,21 +1,16 @@
-.c__form {
-  &__widget {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 5px;
+.form-widget {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+}
 
-    &__label {
-    }
+.widget-input {
+  margin-left: auto;
+  min-width: 185px;
+}
 
-    &__input {
-      margin-left: auto;
-      min-width: 185px;
-    }
-
-    &__value {
-      display: block;
-      width: 30px;
-      text-align: right;
-    }
-  }
+.widget-value {
+  display: block;
+  width: 30px;
+  text-align: right;
 }

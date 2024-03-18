@@ -1,24 +1,24 @@
-<style lang="scss">
+<style lang="scss" scoped>
 @import './HeadbuttGrid.scss';
 </style>
 
 <template>
-  <div class="hg__content">
-    <div class="hg__content__panel hg__content__panel--left">
-      <div class="hg__content__panel__element">
+  <div class="content">
+    <div class="panel panel--left">
+      <div class="element">
         <Configuration />
       </div>
-      <div class="hg__content__panel__element">
+      <div class="element">
         <Encounter />
       </div>
-      <div class="hg__content__panel__element">
+      <div class="element">
         <Usage />
       </div>
-      <div v-if="debug" class="hg__content__panel__element">
+      <div v-if="debug" class="element">
         <Pivot />
       </div>
     </div>
-    <div class="hg__content__panel hg__content__panel--right">
+    <div class="panel panel--right">
       <Map />
     </div>
   </div>

@@ -1,30 +1,23 @@
-<style lang="scss">
+<style lang="scss" scoped>
 @import './Encounter.scss';
 </style>
 
 <template>
-  <div class="e__content">
-    <div class="e__content__encounter" v-if="Configuration.map.name != ''">
-      <div
-        :class="`e__content__encounter__versions e__content__encounter__versions--${version}`"
-        v-for="(encounterGroup, version) in Map.ENCOUNTER_GROUP"
-      >
+  <div v-if="Configuration.map.name != ''">
+    <div
+      :class="`version version--${version}`"
+      v-for="(encounterGroup, version) in Map.ENCOUNTER_GROUP"
+    >
+      <div :class="`rate rate--${rate}`" v-for="rate in Encounter">
+        <span class="label">
+          {{ $t('message.encounter.' + rate) }}
+        </span>
         <div
-          :class="`e__content__encounter__versions__rate e__content__encounter__versions__rate--${rate}`"
-          v-for="rate in Encounter"
+          class="pokemon"
+          v-for="pokemon in getPokemons(encounterGroup, version, rate)"
+          v-bind:style="{ backgroundImage: 'url(public/pokemon/' + pokemon.poke + '.png)' }"
         >
-          <div class="e__content__encounter__versions__rate__label">
-            {{ $t('message.encounter.' + rate) }}
-          </div>
-          <div
-            class="e__content__encounter__versions__rate__pokemons"
-            v-for="pokemon in getPokemons(encounterGroup, version, rate)"
-            v-bind:style="{ backgroundImage: 'url(public/pokemon/' + pokemon.poke + '.png)' }"
-          >
-            <div class="e__content__encounter__versions__rate__pokemons__rate">
-              {{ pokemon.rate }}%
-            </div>
-          </div>
+          <div class="pokemon-rate">{{ pokemon.rate }}%</div>
         </div>
       </div>
     </div>
