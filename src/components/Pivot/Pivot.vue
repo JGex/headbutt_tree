@@ -1,28 +1,24 @@
-<style lang="scss">
-@import './Pivot.scss';
-</style>
-
 <template>
-  <div class="e__content">
-    <div class="c__content__rate">
-      <span class="c__content__rate__label--rare"> Trainer ID </span>
-      <span class="c__content__rate__pivot--rare"> {{ configuration.trainerId }} </span>
+  <div>
+    <div>
+      <span> Trainer ID :</span>
+      <span> {{ configuration.trainerId }} </span>
     </div>
-    <div class="c__content__rate">
-      <span class="c__content__rate__label--rare"> Map name </span>
-      <span class="c__content__rate__pivot--rare"> {{ configuration.map.name }} </span>
+    <div>
+      <span> Map name :</span>
+      <span> {{ configuration.map.name }} </span>
     </div>
-    <div class="c__content__rate">
-      <span class="c__content__rate__label--rare"> Map scale </span>
-      <span class="c__content__rate__pivot--rare"> {{ configuration.map.scale }} </span>
+    <div>
+      <span> Map scale :</span>
+      <span> {{ configuration.map.scale }} </span>
     </div>
-    <div class="c__content__rate">
-      <span class="c__content__rate__label--rare"> Rare </span>
-      <span class="c__content__rate__pivot--rare"> {{ calcPivot() }} </span>
+    <div>
+      <span> Rare :</span>
+      <span> {{ calcPivot() }} </span>
     </div>
-    <div class="c__content__rate">
-      <span class="c__content__rate__label--moderate"> Normal </span>
-      <span class="c__content__rate__pivot--moderate"> {{ calc() }} </span>
+    <div>
+      <span> Normal :</span>
+      <span> {{ calc() }} </span>
     </div>
   </div>
 </template>
