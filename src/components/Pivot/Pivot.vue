@@ -1,23 +1,23 @@
 <template>
   <div>
     <div>
-      <span> Trainer ID :</span>
+      <span> Trainer ID: </span>
       <span> {{ configuration.trainerId }} </span>
     </div>
     <div>
-      <span> Map name :</span>
+      <span> Map name: </span>
       <span> {{ configuration.map.name }} </span>
     </div>
     <div>
-      <span> Map scale :</span>
+      <span> Map scale: </span>
       <span> {{ configuration.map.scale }} </span>
     </div>
     <div>
-      <span> Rare :</span>
+      <span> Rare: </span>
       <span> {{ calcPivot() }} </span>
     </div>
     <div>
-      <span> Normal :</span>
+      <span> Normal: </span>
       <span> {{ calc() }} </span>
     </div>
   </div>
