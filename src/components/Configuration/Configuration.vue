@@ -27,6 +27,9 @@
         @keyup="configuration.setTrainerId(trainerId)"
         :placeholder="`${$t('message.configuration.enter_trainer_id')}`"
       />
+      <span class="input-error" v-if="errors.trainerId">
+        {{ $t('error.configuration.trainer_id.' + errors.trainerId) }}
+      </span>
     </div>
 
     <div class="form-widget">
@@ -70,9 +73,34 @@
 import { HeadbuttConfiguration } from '@/stores/Configuration'
 import Map from '@/globals/map'
 import Locale from '@/globals/locale'
+import {ref} from "vue";
 
 const configuration = HeadbuttConfiguration()
 const trainerId = configuration.trainerId
 const mapName = configuration.map.name
 const mapScale = configuration.map.scale
+
+const errors = ref({})
+
+function checkTrainerID(trainerId: string) {
+  const regex = /^\d+$/
+
+  if (
+    '' !== trainerId
+    && (
+      !regex.test(trainerId)
+      || 65535 <= parseInt(trainerId)
+    )
+  ) {
+    errors.value = {
+        trainerId: 'malformed'
+    }
+
+    return
+  }
+
+  errors.value = {}
+  configuration.setTrainerId(trainerId)
+}
+
 </script>

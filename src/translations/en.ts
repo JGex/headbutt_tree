@@ -1,4 +1,11 @@
 export default {
+  error: {
+    configuration: {
+      trainer_id: {
+        malformed: 'The trainer ID is malformed'
+      }
+    }
+  },
   message: {
     configuration: {
       enter_trainer_id: 'Enter your trainer ID',

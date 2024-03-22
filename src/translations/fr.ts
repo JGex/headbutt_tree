@@ -1,4 +1,11 @@
 export default {
+  error: {
+    configuration: {
+      trainer_id: {
+        malformed: 'L\'ID dresseur est malformé'
+      }
+    }
+  },
   message: {
     configuration: {
       enter_trainer_id: 'Saisissez votre ID de dresseur',
