@@ -2,7 +2,7 @@ export default {
   error: {
     configuration: {
       trainer_id: {
-        malformed: 'L\'ID dresseur est malformé'
+        malformed: "L'ID dresseur est malformé"
       }
     }
   },
