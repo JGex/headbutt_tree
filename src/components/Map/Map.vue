@@ -1,5 +1,9 @@
+<style lang="scss" scoped>
+@import './Map.scss';
+</style>
+
 <template>
-  <div v-if="config.map.name != ''">
+  <div class="map-display" v-if="config.map.name != ''">
     <img v-if="loaded" :src="img.src" :alt="img.alt" :width="img.width" :height="img.height" />
   </div>
 </template>

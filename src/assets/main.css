@@ -1,7 +1,8 @@
 body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 12px;
-  overflow: hidden;
+  height: 98vh;
+  margin-bottom: 5px;
 }
 
 main {

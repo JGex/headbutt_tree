@@ -1,18 +1,26 @@
 .form-widget {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 5px;
 }
 
+.widget-label {
+  margin: 5px auto;
+}
+
 .widget-input {
-  margin-left: auto;
-  min-width: 185px;
+  &--with-value {
+    display: flex;
+    flex-direction: row;
+  }
+
+  flex: 9 1 auto;
 }
 
 .widget-value {
-  display: block;
-  width: 30px;
+  flex: 1 1 auto;
   text-align: right;
+  width: 30px;
 }
 
 .input-error {

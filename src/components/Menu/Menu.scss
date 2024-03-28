@@ -1,0 +1,49 @@
+.element {
+  padding: 6px;
+}
+
+.content {
+  border: 2px solid #888888;
+  border-radius: 7px;
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 600px;
+  margin-right: auto;
+  float: left;
+  background-color: white;
+}
+
+.menu-content {
+  position: relative;
+  border-radius: 7px;
+  overflow: auto;
+  height: 90vh;
+
+  &.v-enter-active,
+  &.v-leave-active {
+    transition: all 0.5s ease;
+    overflow: hidden;
+    max-width: 600px;
+    height: 90vh;
+  }
+
+  &.v-enter-from,
+  &.v-leave-to {
+    overflow: hidden;
+    max-width: 27px;
+    height: 27px;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+
+  img {
+    width: 25px;
+  }
+}

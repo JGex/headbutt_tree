@@ -1,27 +1,9 @@
-.content {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  background-color: #f7f7f7;
+.menu {
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }
 
-.panel {
-  border: 2px solid #888888;
-  margin: 2px;
-  padding: 2px;
-
-  &--left {
-    width: 27%;
-    min-width: 476px;
-  }
-
-  &--right {
-    width: 80%;
-    background-color: #eeeeee;
-    overflow: auto;
-  }
-}
-
-.element {
-  padding: 6px;
+.map {
+  overflow: hidden;
 }
