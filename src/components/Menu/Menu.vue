@@ -4,6 +4,9 @@
 
 <template>
   <div class="content">
+    <div class="burger">
+      <img src="/public/icon/hamburger.svg" alt="Menu" @click="toggleMenu" />
+    </div>
     <transition>
       <div class="menu-content" v-show="menuDisplayed">
         <div class="element">
@@ -20,9 +23,6 @@
         </div>
       </div>
     </transition>
-    <div class="burger">
-      <img src="/public/icon/hamburger.svg" alt="Menu" @click="toggleMenu" />
-    </div>
   </div>
 </template>
 
