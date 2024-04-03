@@ -2,7 +2,13 @@ import Version from '@/globals/version'
 import Encounter from '@/globals/encounter'
 import Pokemon from '@/globals/pokemon'
 
-const MAP = {
+const MAP: {
+  [key: string]: {
+    encounter: {
+      [key: string]: number
+    }
+  }
+} = {
   azalea_town: {
     encounter: { [Version.GOLD]: 0, [Version.SILVER]: 0, [Version.CRYSTAL]: 0 }
   },
@@ -62,7 +68,18 @@ const MAP = {
   }
 }
 
-const ENCOUNTER_GROUP = {
+export interface PokemonEncounterGroup {
+  [key: string]: Array<PokemonEncounter>
+}
+
+export interface PokemonEncounter {
+  poke: string
+  rate: number
+}
+
+const ENCOUNTER_GROUP: {
+  [key: string]: Array<PokemonEncounterGroup>
+} = {
   [Version.GOLD]: [
     {
       [Encounter.NORMAL]: [

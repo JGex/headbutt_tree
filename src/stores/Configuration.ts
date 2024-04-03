@@ -1,7 +1,17 @@
 import { defineStore } from 'pinia'
 
+interface Map {
+  name: string
+  scale: number
+}
+
+interface Configuration {
+  trainerId: string
+  map: Map
+}
+
 export const HeadbuttConfiguration = defineStore('configuration', {
-  state: () => {
+  state: (): Configuration => {
     return {
       trainerId: '',
       map: {
