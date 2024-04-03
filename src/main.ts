@@ -1,5 +1,4 @@
 import './assets/normalize.css'
-import './assets/font-awesome.min.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'
