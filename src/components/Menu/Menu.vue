@@ -35,7 +35,7 @@ import { ref } from 'vue'
 
 const urlParams = new URLSearchParams(window.location.search)
 const debug = urlParams.has('debug')
-let menuDisplayed = ref(false)
+const menuDisplayed = ref<boolean>(false)
 
 function toggleMenu(): void {
   menuDisplayed.value = !menuDisplayed.value

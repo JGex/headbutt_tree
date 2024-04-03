@@ -10,7 +10,7 @@
       </label>
       <select id="locale" class="widget-input" v-model="$i18n.locale">
         <option v-for="locale in Locale" :value="locale">
-          {{ $t('message.locale.' + locale) }}
+          {{ $t(`message.locale.${locale}`) }}
         </option>
       </select>
     </div>
@@ -28,8 +28,8 @@
         @change=""
         :placeholder="`${$t('message.configuration.enter_trainer_id')}`"
       />
-      <span class="input-error" v-if="errors.trainerId">
-        {{ $t('error.configuration.trainer_id.' + errors.trainerId) }}
+      <span class="input-error" v-if="trainerIdError">
+        {{ $t(`error.configuration.trainer_id.${trainerIdError}`) }}
       </span>
     </div>
 
@@ -64,7 +64,7 @@
           max="4"
           step="0.1"
           value="1"
-          @change="configuration.setMapScale(parseFloat(mapScale))"
+          @change="configuration.setMapScale(mapScale)"
         />
         <span class="widget-value">{{ configuration.map.scale }}x</span>
       </div>
@@ -82,21 +82,18 @@ const configuration = HeadbuttConfiguration()
 const trainerId = configuration.trainerId
 const mapName = configuration.map.name
 const mapScale = configuration.map.scale
+const trainerIdError = ref<string>('')
 
-const errors = ref({})
+function checkTrainerID(trainerId: string): void {
+  const trainerIdRegex = /^\d{5}$/
 
-function checkTrainerID(trainerId: string) {
-  const regex = /^\d+$/
-
-  if ('' !== trainerId && (!regex.test(trainerId) || 65535 <= parseInt(trainerId))) {
-    errors.value = {
-      trainerId: 'malformed'
-    }
+  if ('' !== trainerId && (!trainerIdRegex.test(trainerId) || 65535 <= parseInt(trainerId))) {
+    trainerIdError.value = 'malformed'
 
     return
   }
 
-  errors.value = {}
+  trainerIdError.value = ''
   configuration.setTrainerId(trainerId)
 }
 </script>

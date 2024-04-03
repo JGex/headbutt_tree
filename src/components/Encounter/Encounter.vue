@@ -5,19 +5,21 @@
 <template>
   <div v-if="Configuration.map.name != ''">
     <div
-      :class="`version version--${version}`"
       v-for="(encounterGroup, version) in Map.ENCOUNTER_GROUP"
+      :class="`version version--${version}`"
     >
       <div :class="`rate rate--${rate}`" v-for="rate in Encounter">
         <span class="label">
-          {{ $t('message.encounter.' + rate) }}
+          {{ $t(`message.encounter.${rate}`) }}
         </span>
         <div
           class="pokemon"
-          v-for="pokemon in getPokemons(encounterGroup, version, rate)"
-          v-bind:style="{ backgroundImage: 'url(public/pokemon/' + pokemon.poke + '.png)' }"
+          v-for="pokemonEncounter in getPokemons(encounterGroup, version, rate)"
+          v-bind:style="{
+            backgroundImage: `url(public/pokemon/${pokemonEncounter.poke}.png)`
+          }"
         >
-          <div class="pokemon-rate">{{ pokemon.rate }}%</div>
+          <div class="pokemon-rate">{{ pokemonEncounter.rate }}%</div>
         </div>
       </div>
     </div>
@@ -27,11 +29,15 @@
 <script setup lang="ts">
 import { HeadbuttConfiguration } from '@/stores/Configuration'
 import Encounter from '@/globals/encounter'
-import Map from '@/globals/map'
+import Map, { type PokemonEncounter, type PokemonEncounterGroup } from '@/globals/map'
 
 const Configuration = HeadbuttConfiguration()
 
-function getPokemons(group: Array, version: string, rate: string) {
+function getPokemons(
+  group: Array<PokemonEncounterGroup>,
+  version: string,
+  rate: string
+): Array<PokemonEncounter> {
   return group[Map.MAP[Configuration.map.name].encounter[version]][rate]
 }
 </script>
