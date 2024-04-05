@@ -72,8 +72,8 @@ function isCircle(w: number, h: number): boolean {
 }
 
 function calcIndex(w: number, h: number): number {
-  let x = w + 4
-  let y = h + 4
+  let x = w + 3
+  let y = h + 3
 
   return Math.floor((x * y + x + y) / 5) % 10
 }
