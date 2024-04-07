@@ -12,7 +12,8 @@
         {{ $t('message.usage.look_for_the_marked_headbutt_trees_on_the_map') }}
       </li>
     </ul>
-    <ul class="resume-list">
+    <span class="label">{{ $t('message.usage.search_for_headbutt_tree') }}</span>
+    <ul class="action-list">
       <li
         class="list-element"
         v-html="$t('message.usage.star_will_give_encounter_at_encounter_rate', { percent: '80' })"

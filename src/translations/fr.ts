@@ -46,15 +46,16 @@ export default {
     },
     usage: {
       circle_will_give_encounter_at_encounter_rate:
-        '<b>Le cercle</b> vous donnera des <b>rencontres normales</b> à un taux de <b>{percent}%</b>',
+        '<b>Un cercle</b> vous donneront des <b>rencontres normales</b> à un taux de <b>{percent}%</b>',
       enter_your_trainer_id: 'Entrer votre ID de dresseur',
       look_for_the_marked_headbutt_trees_on_the_map:
         'Cherchez les arbres à coups de boule marqués sur la carte',
+      search_for_headbutt_tree: 'Chercher les arbres à coup de boule, ceux avec :',
       select_a_map: 'Sélectionnez une carte',
       star_will_give_encounter_at_encounter_rate:
-        "<b>L'étoile</b> vous donnera des <b>rencontres rares</b> à un taux de <b>{percent}%</b>",
+        '<b>Une étoile</b> vous donneront des <b>rencontres rares</b> à un taux de <b>{percent}%</b>',
       unmarked_will_give_encounter_at_encounter_rate:
-        '<b>Sans marques</b> vous donnera des <b>rencontres normales</b> à un taux de <b>{percent}%</b>',
+        '<b>Sans marques</b> vous donneront des <b>rencontres normales</b> à un taux de <b>{percent}%</b>',
       usage: 'Utilisation :'
     },
     version: {

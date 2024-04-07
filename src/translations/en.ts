@@ -50,6 +50,7 @@ export default {
       enter_your_trainer_id: 'Enter your trainer ID',
       look_for_the_marked_headbutt_trees_on_the_map:
         'Look for the marked headbutt trees on the map',
+      search_for_headbutt_tree: 'Search for headbutt tree, those with:',
       select_a_map: 'Select a map',
       star_will_give_encounter_at_encounter_rate:
         '<b>A Star</b> will give you <b>rare encounters</b> at <b>{percent}%</b> encounter rate',
