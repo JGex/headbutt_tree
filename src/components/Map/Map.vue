@@ -47,7 +47,7 @@ function loadImage(imageName: string, mapScale: number): HTMLImageElement {
     imgLoaded.value = true
   }
 
-  img.src = `public/maps/${imageName}.png`
+  img.src = `/maps/${imageName}.png`
   img.alt = imageName
 
   return img

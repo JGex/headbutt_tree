@@ -16,7 +16,7 @@
           class="pokemon"
           v-for="pokemonEncounter in getPokemons(encounterGroup, version, rate)"
           v-bind:style="{
-            backgroundImage: `url(public/pokemon/${pokemonEncounter.poke}.png)`
+            backgroundImage: `url(/pokemon/${pokemonEncounter.poke}.png)`
           }"
         >
           <div class="pokemon-rate">{{ pokemonEncounter.rate }}%</div>
