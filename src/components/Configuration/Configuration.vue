@@ -79,9 +79,9 @@ import Locale from '@/globals/locale'
 import { ref } from 'vue'
 
 const configuration = HeadbuttConfiguration()
-const trainerId = configuration.trainerId
-const mapName = configuration.map.name
-const mapScale = configuration.map.scale
+const trainerId = ref<string>(configuration.trainerId)
+const mapName = ref<string>(configuration.map.name)
+const mapScale = ref<number>(configuration.map.scale)
 const trainerIdError = ref<string>('')
 
 function checkTrainerID(trainerId: string): void {
