@@ -3,9 +3,11 @@ version: "3.9"
 services:
   headbutt-tree-node:
     container_name: headbutt-tree-node
-    command: /bin/sh -c "npm run serv"
+    command: /bin/sh -c "npm run ${NODE_ENV}"
     working_dir: /app
     user: ${WEBUSER_UID}:${WEBUSER_GID}
+    environment:
+        NODE_ENV: ${NODE_ENV}
     build:
       context: ./node
     ports:
