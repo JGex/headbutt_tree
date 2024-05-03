@@ -8,7 +8,7 @@
 ####
 
 # Compose commande use to execute docker-compose command
-COMPOSE=docker-compose --file ./docker/docker-compose.yaml --env-file ./docker/.docker.env
+COMPOSE=docker compose --file ./docker/docker-compose.yaml --env-file ./docker/.docker.env
 # Docker Compose command to execute a command inside a docker
 CMD_PREFIX_EXEC=$(COMPOSE) exec
 # Docker Compose command use to execute command in php container

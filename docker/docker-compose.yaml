@@ -11,11 +11,6 @@ services:
     build:
       context: ./node
     ports:
-      - ${SERVER_PORT}:8080
+      - "127.0.0.1:${SERVER_PORT}:8080"
     volumes:
       - ../:/app
-    networks:
-      - headbutt-tree
-
-networks:
-  headbutt-tree:
