@@ -25,6 +25,7 @@ dist-ssr
 coverage
 *.local
 *.tsbuildinfo
+.npm-cache-docker
 ###< node
 
 ###> Logs

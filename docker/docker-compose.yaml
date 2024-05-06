@@ -8,6 +8,7 @@ services:
     user: ${WEBUSER_UID}:${WEBUSER_GID}
     environment:
         NODE_ENV: ${NODE_ENV}
+        NPM_CONFIG_CACHE: /app/.npm-cache-docker/
     build:
       context: ./node
     ports:
