@@ -1,16 +1,13 @@
-version: "3.9"
-
 services:
   headbutt-tree-node:
     container_name: headbutt-tree-node
+    image: node:21-alpine
     command: /bin/sh -c "npm run ${NODE_ENV}"
     working_dir: /app
     user: ${WEBUSER_UID}:${WEBUSER_GID}
     environment:
         NODE_ENV: ${NODE_ENV}
         NPM_CONFIG_CACHE: /app/.npm-cache-docker/
-    build:
-      context: ./node
     ports:
       - "127.0.0.1:${SERVER_PORT}:8080"
     volumes:
