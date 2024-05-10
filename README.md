@@ -3,13 +3,13 @@
 Headbutt tree is used to know which Pokemon will spawn when headbutting tree
 
 
-## Installation
-### Requirements
+# Installation
+## Requirements
 
 - [Docker](https://www.docker.com/) is the only requirement
 
 
-### Configuration
+## Configuration
 
 You must create a `.docker.env` file
 ```bash
@@ -20,17 +20,31 @@ then, check if the default values fit to your needs
 
 You can change the default ports used if port 8080 is already used on your machine
 ```env
-SERVER_PORT=80
+SERVER_PORT=8080
 ```
 
-If your user UID or GID is not 1000, you can change them to prevent permission issue,
+If the user running docker UID or GID is not 1000, you can change them to prevent permission issue,
 you can find them by running `` id -u `whoami` `` or `` id -g `whoami` ``
 ```env
 WEBUSER_UID=1000
 WEBUSER_GID=1000
 ```
 
-### Initialisation
+### Development
+
+For developers, change the `NODE_ENV` var for `development`
+```env
+NODE_ENV=development
+```
+
+### Production
+
+To use it in production change the `NODE_ENV` var for `production`
+```env
+NODE_ENV=production
+```
+
+## Initialisation
 
 To initialize to project, you need to run this command.  
 It will create the docker, install npm dependencies and start the server
@@ -38,7 +52,7 @@ It will create the docker, install npm dependencies and start the server
 make dk-build
 ```
 
-## Usage
+# Usage
 
 A Makefile is provided to help the developer using application's commands.  
 Make do not accept arguments, else you must pass variable with the command  
@@ -70,10 +84,11 @@ make node-install PACKAGE="package name"
 
 For other commands, see the help provided by the Makefile
 ```bash
-Make
+make
 ```
 
-## Roadmap
-### v1
-- Add stars and circles on the map to know where to find Pokemons
-- add pre-commit hook with the linter
+If you want to override or add new rule to Makefile, juste create a file `local.mk` and modify it to your needs
+
+# Roadmap
+## v1.1
+- Add a dark/light theme switch 
