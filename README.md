@@ -91,4 +91,6 @@ If you want to override or add new rule to Makefile, juste create a file `local.
 
 # Roadmap
 ## v1.1
-- Add a dark/light theme switch 
+- Pre-select language based on browser locale
+## v1.2
+- Add a dark/light theme switch
