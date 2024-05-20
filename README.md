@@ -90,7 +90,7 @@ make
 If you want to override or add new rule to Makefile, juste create a file `local.mk` and modify it to your needs
 
 # Roadmap
-## v1.1
+- Add Violet city
+- Show circle and start only on tile with small trees
 - Pre-select language based on browser locale
-## v1.2
 - Add a dark/light theme switch
