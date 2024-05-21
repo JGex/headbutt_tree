@@ -1,7 +1,7 @@
 # Headbutt Tree
 
-Headbutt tree is used to know which Pokemon will spawn when headbutting tree
-
+Headbutt tree is used to know which Pokemon will spawn when headbutting tree  
+My work is based on an existing [tool](http://tshadowknight.com/Headbutt%20Grid.htm) made by [TShadowKnight](https://www.reddit.com/user/TShadowKnight/)
 
 # Installation
 ## Requirements
@@ -90,6 +90,7 @@ make
 If you want to override or add new rule to Makefile, juste create a file `local.mk` and modify it to your needs
 
 # Roadmap
+- Mention TShadowKnight in the footer
 - Add Violet city
 - Show circle and start only on tile with small trees
 - Pre-select language based on browser locale
