@@ -92,6 +92,6 @@ If you want to override or add new rule to Makefile, juste create a file `local.
 # Roadmap
 - Mention TShadowKnight in the footer
 - Add Violet city
-- Show circle and start only on tile with small trees
+- Show circle and stars only on tile with small trees
 - Pre-select language based on browser locale
 - Add a dark/light theme switch

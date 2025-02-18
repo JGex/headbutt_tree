@@ -1,7 +1,7 @@
 services:
   headbutt-tree-node:
     container_name: headbutt-tree-node
-    image: node:21-alpine
+    image: node:23-alpine
     command: /bin/sh -c "npm run ${NODE_ENV}"
     working_dir: /app
     user: ${WEBUSER_UID}:${WEBUSER_GID}

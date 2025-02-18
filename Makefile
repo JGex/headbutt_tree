@@ -53,12 +53,18 @@ endif
 
 
 ####
+## General commands
+####
+
+start: dk-build ## Build and start the containers present in the docker-compose
+	@$(PRE_CMD)
+	$(CMD_PREFIX_NODE) "npm install"
+
+####
 ## Compose commands
 ####
 
 dk-up: ## Build and start the containers present in the docker-compose
-	@$(PRE_CMD)
-	$(COMPOSE) pull
 	@$(PRE_CMD)
 	$(COMPOSE) up --detach --remove-orphans
 
@@ -97,11 +103,11 @@ node-root-exec: ## CMD="/bin/sh" Execute a command in the `node` container as ro
 
 node-install: ## PACKAGE="" install an npm package
 	@$(PRE_CMD)
-	$(CMD_PREFIX_NODE) "npm install $(PACKAGE)"
+	$(CMD_PREFIX_NODE) "npm install $(PACKAGE) --save"
 
 
 ####
 ## Personal commands
 ####
 
--include local.mk
+-include local.Makefile
