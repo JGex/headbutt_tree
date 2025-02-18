@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import HeadbuttGrid from './components/HeadbuttGrid/HeadbuttGrid.vue'
-</script>
-
 <template>
-  <main>
-    <HeadbuttGrid />
-  </main>
+    <main>
+        <HeadbuttGrid />
+    </main>
 </template>
+
+<script setup lang="ts">
+import HeadbuttGrid from '@/page/HeadbuttGrid.vue'
+</script>

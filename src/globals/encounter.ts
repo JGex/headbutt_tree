@@ -2,6 +2,6 @@ const NORMAL = 'normal'
 const RARE = 'rare'
 
 export default {
-  NORMAL: NORMAL,
-  RARE: RARE
+    NORMAL: NORMAL,
+    RARE: RARE
 }

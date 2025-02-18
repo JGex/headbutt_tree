@@ -11,14 +11,14 @@ import App from './App.vue'
 const pinia = createPinia()
 
 const messages = {
-  en: translationEn,
-  fr: translationFr
+    en: translationEn,
+    fr: translationFr
 }
 
 const i18n = createI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages
+    locale: 'en',
+    fallbackLocale: 'en',
+    messages
 })
 
 const app = createApp(App)
