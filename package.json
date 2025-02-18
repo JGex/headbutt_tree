@@ -1,7 +1,7 @@
 {
   "name": "headbutt_tree",
   "description": "Find location of headbutt tree",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "development": "npm install && npm run format && vite",
